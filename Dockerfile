@@ -5,4 +5,4 @@ RUN apt-get update && apt-get install -y \
         ttyrec
         gcc
 RUN git clone https://github.com/icholy/ttygif.git && cd ttygif
-        
+RUN make && make install        
