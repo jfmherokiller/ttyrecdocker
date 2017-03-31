@@ -1,0 +1,11 @@
+#!/bin/bash
+ttyrecfilename=$1
+for (( i=0; i<${#ttyrecfilename}; i++ )); do
+charater="${ttyrecfilename:$i:1}"
+if [ "$charater" == " " ]
+then
+echo "space"
+else
+echo "$charater"
+fi
+done
