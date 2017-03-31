@@ -13,7 +13,9 @@ git clone https://github.com/icholy/ttygif.git && \
 cd ttygif && \
 make && make install && \ 
 cd .. && rm -rf ttygif && \
-apt-get purge -y gcc
+apt-get purge -y gcc git make && \
+apt-get autoremove --purge
+
 
 
 
