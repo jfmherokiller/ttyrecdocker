@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:latest-slim
 RUN apt-get update && apt-get install -y \
         imagemagick \
         x11-apps \
@@ -8,10 +8,14 @@ RUN apt-get update && apt-get install -y \
         xvfb \
         make \
         xdotool \
-        xterm
-        
-RUN git clone https://github.com/icholy/ttygif.git && cd ttygif && \
-        make && make install && cd .. && rm -rf ttygif
+        xterm && \
+git clone https://github.com/icholy/ttygif.git && \ 
+cd ttygif && \
+make && make install && \ 
+cd .. && rm -rf ttygif && \
+apt-get purge -y gcc
+
+
 
 ENV DISPLAY :99
 
