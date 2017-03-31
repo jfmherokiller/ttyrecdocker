@@ -7,7 +7,9 @@ RUN apt-get update && apt-get install -y \
         gcc \
         xvfb \
         make \
-        xdotool
+        xdotool \
+        xterm
+        
 RUN git clone https://github.com/icholy/ttygif.git && cd ttygif && \
         make && make install && cd .. && rm -rf ttygif
 
