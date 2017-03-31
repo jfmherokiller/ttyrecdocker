@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install -y \
         git \
         gcc
 RUN git clone https://github.com/icholy/ttygif.git && cd ttygif && \
-        make && make install        
+        make && make install && cd .. && rm -rf ttygif        
