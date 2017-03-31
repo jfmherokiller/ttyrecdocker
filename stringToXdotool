@@ -4,8 +4,8 @@ for (( i=0; i<${#ttyrecfilename}; i++ )); do
 charater="${ttyrecfilename:$i:1}"
 if [ "$charater" == " " ]
 then
-echo "space"
+xdotool key "space"
 else
-echo "$charater"
+xdotool key "$charater"
 fi
 done
