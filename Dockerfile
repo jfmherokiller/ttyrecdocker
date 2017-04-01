@@ -14,7 +14,7 @@ cd ttygif && \
 make && make install && \ 
 cd .. && rm -rf ttygif && \
 apt-get purge -y gcc git make && \
-apt-get autoremove --purge
+apt-get autoremove --purge -y
 
 
 
